@@ -1,55 +1,34 @@
 // import styles
 import './contact.css'
 
-import { useState } from 'react'
-import { USERNAME, PASSWORD, SERVER, PORT } from '../../config'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser';
+import { USER_ID, TEMPLATE_ID, PUBLIC_KEY } from '../../config'
 
-const Contact = () => {
+export const Contact = () => {
 
-  const nodemailer = require('nodemailer');
+  let date = new Date()
+  let day = date.getDay()
+  let month = date.getMonth() + 1
+  let year = date.getFullYear()
+  let hours = date.getHours()
+  let minutes = date.getMinutes()
+  let absendeZeit = `Nachricht gesendet am ${day}.${month}.${year} um ${hours}:${minutes} Uhr.`
 
-  const transporter = nodemailer.createTransport({
-    host: 'smtp.example.com',
-    port: 587,
-    secure: false,
-    auth: {
-      user: 'your-email@example.com',
-      pass: 'your-email-password'
-    }
-  });
+  console.log(absendeZeit)
 
+  const form = useRef();
 
-  const [message, setMessage] = useState('')
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(message, name, email)
-    openPopup()
-    setMessage('')
-    setName('')
-    setEmail('')
-    console.log(USERNAME)
-    // sendEmail()
-  }
-
-  const handleChangeName = (e) => {
-    setName(e.target.value)
-  }
-  const handleChangeEmail = (e) => {
-    setEmail(e.target.value)
-  }
-  const handleChangeMessage = (e) => {
-    setMessage(e.target.value)
-  }
-
-  const openPopup = () => {
-    console.log('sent!')
-  }
-
-  const resetForm = () => {
-    document.getElementById('form').reset()
+    emailjs.sendForm(`${USER_ID}`, `${TEMPLATE_ID}`, form.current, `${PUBLIC_KEY}`)
+      .then((result) => {
+        console.log(result.text); //show modal and reset
+      }
+        , (error) => {
+          console.log(error.text); //show modal with Error-message
+        });
   }
 
   return (
@@ -63,17 +42,17 @@ const Contact = () => {
         <div className='wrapper'>
           <form
             id='form'
-            // method='post'
-            onSubmit={handleSubmit}
+            ref={form}
+            method='post'
+            onSubmit={sendEmail}
             autoComplete='off'>
             <div className='form-row'>
               <label>Name</label>
               <input
                 type='text'
                 id='name'
-                value={name}
                 placeholder='Jane Doe'
-                onChange={handleChangeName}
+                name='name'
                 required />
             </div>
             <div className='form-row'>
@@ -81,9 +60,8 @@ const Contact = () => {
               <input
                 type='email'
                 id='email'
-                value={email}
                 placeholder='email@domain.com'
-                onChange={handleChangeEmail}
+                name='email'
                 required />
             </div>
             <div className='form-row'>
@@ -92,11 +70,15 @@ const Contact = () => {
                 className='textarea'
                 type='text'
                 id='message'
-                value={message}
-                onChange={handleChangeMessage}
                 placeholder='Enter your message'
+                name='message'
                 required />
             </div>
+            <input
+              style={{ display: 'none', height: '0px', width: '0px' }}
+              name='date'
+              value={absendeZeit}
+            ></input>
             <div className='form-row'>
               <button type="submit">Submit</button>
             </div>
