@@ -6,17 +6,17 @@ import { USERNAME, PASSWORD, SERVER, PORT } from '../../config'
 
 const Contact = () => {
 
-  // const nodemailer = require('nodemailer');
+  const nodemailer = require('nodemailer');
 
-  // const transporter = nodemailer.createTransport({
-  //   host: 'smtp.example.com',
-  //   port: 587,
-  //   secure: false,
-  //   auth: {
-  //     user: 'your-email@example.com',
-  //     pass: 'your-email-password'
-  //   }
-  // });
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.example.com',
+    port: 587,
+    secure: false,
+    auth: {
+      user: 'your-email@example.com',
+      pass: 'your-email-password'
+    }
+  });
 
 
   const [message, setMessage] = useState('')
@@ -97,7 +97,9 @@ const Contact = () => {
                 placeholder='Enter your message'
                 required />
             </div>
-            <button type="submit">Submit</button>
+            <div className='form-row'>
+              <button type="submit">Submit</button>
+            </div>
           </form>
         </div>
       </div>
