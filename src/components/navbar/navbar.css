@@ -1,0 +1,125 @@
+.navbar .container {
+    position: sticky;
+    top: 0;
+    display: flex;
+    z-index: 100;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    color: black;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar a {
+    color:black;
+  }
+  
+  .navbar a:hover {
+    transition-duration: .3s;
+    color: #FACF0F;
+  }
+  
+  .left-side {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size:large;
+  }
+  
+  img {
+    height: 62px;
+    width: 62px;
+    border-radius: 50%;
+    background-color: #FACF0F;
+    margin: 8px;
+  }
+  
+  .name {
+    padding-left: .8rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .name {
+      visibility: hidden;
+    }
+  }
+  
+  ul {
+    display: flex;
+    text-align: center;
+  }
+  
+  li {
+    display: block;
+    list-style: none;
+    padding: 10px 12px;
+  }
+  
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    padding: 2px;
+  }
+  
+  
+  /* Hamburger Menu */
+  .hamburger-menu {
+    padding-right: 10px;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: black;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+  }
+  
+  .menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    min-width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    z-index: 10;
+  }
+  
+  .menu-items.active {
+    display: flex;
+  }
+  
+    @media screen and (max-width: 768px) {
+  
+      .navbar ul {
+        position: fixed;
+        right: -200%;
+      }
+    
+      .hamburger-menu {
+        display: block;
+  
+      }
+    
+      .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+    
+      .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+    
+      .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+    
+    }
