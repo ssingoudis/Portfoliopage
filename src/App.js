@@ -8,6 +8,8 @@ import Navbar from './components/navbar/navbar';
 import Home from './components/home/home';
 import Footer from './components/footer/footer';
 import Contact from './components/contact/contact';
+import FlashNotice from './components/flash-notice/flash-notice';
+import BasicAlerts from './components/alerts/alerts';
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
     <Home />
 
     <Contact />
+    {/* <FlashNotice /> */}
+    {/* <BasicAlerts /> */}
     <Footer />
 
     </div>

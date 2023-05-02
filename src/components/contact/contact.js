@@ -1,9 +1,16 @@
 // import styles
 import './contact.css'
 
-import { useState, useRef } from 'react'
+//import components
+import BasicAlerts from '../alerts/alerts';
+
+//import hooks
+import { useRef, useState } from 'react'
+
 import emailjs from '@emailjs/browser';
 import { USER_ID, TEMPLATE_ID, PUBLIC_KEY } from '../../config'
+
+
 
 export const Contact = () => {
 
@@ -17,6 +24,8 @@ export const Contact = () => {
 
   console.log(absendeZeit)
 
+  const [isSuccess, setIsSuccess] = useState(null)
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -24,15 +33,17 @@ export const Contact = () => {
 
     emailjs.sendForm(`${USER_ID}`, `${TEMPLATE_ID}`, form.current, `${PUBLIC_KEY}`)
       .then((result) => {
-        console.log(result.text); //show modal and reset
+        setIsSuccess(true)
+        form.current.reset()
       }
         , (error) => {
-          console.log(error.text); //show modal with Error-message
+          setIsSuccess(false)
         });
   }
 
   return (
     <div className='contact'>
+      <BasicAlerts isSuccess={isSuccess} />
       <div className='container'>
         <h1>Contact</h1>
         <hr className='heading' />
@@ -40,6 +51,8 @@ export const Contact = () => {
       </div>
       <div className='form-container'>
         <div className='wrapper'>
+
+          {/* https://dashboard.emailjs.com/admin */}
           <form
             id='form'
             ref={form}
@@ -78,6 +91,7 @@ export const Contact = () => {
               style={{ display: 'none', height: '0px', width: '0px' }}
               name='date'
               value={absendeZeit}
+              readOnly
             ></input>
             <div className='form-row'>
               <button type="submit">Submit</button>
@@ -85,6 +99,10 @@ export const Contact = () => {
           </form>
         </div>
       </div>
+{/* 
+      {isSuccess && <BasicAlerts severity="success">Your form was submitted successfully!</BasicAlerts>}
+      {!isSuccess && <BasicAlerts severity="error">There was an error submitting your form.</BasicAlerts>} */}
+
     </div>
   )
 }
