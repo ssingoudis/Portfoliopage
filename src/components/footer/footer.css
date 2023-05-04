@@ -11,6 +11,7 @@
   
   .footer hr {
     width: 100%;
+    border: 1px solid grey;
   }
   
   .footer .mobile-hr {
@@ -20,6 +21,7 @@
   .footer a {
     color: #fff;
     font-weight: 700;
+    text-decoration: none;
   }
   
   .footer a:hover {
@@ -52,6 +54,7 @@
     justify-items: baseline;
     justify-content: space-evenly;
     padding-inline-start: 0;
+    list-style: none;
   }
   
   .footer li {

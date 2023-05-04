@@ -2,58 +2,59 @@
     display: block;
     background-image: url('../../img/home-background.png');
     height: calc(100vh - 78px);
-      padding: 1rem;
-  }
-  
-  .home h1 {
+    padding: 1rem;
+}
+
+.home h1 {
     margin-top: 0;
     padding-top: 2rem;
-  }
-  
-  .home button {
-      margin-top: 16px;
-  }
-  
-  .mouse-container {
+}
+
+.home button {
+    margin-top: 16px;
+}
+
+.mouse-container {
     position: absolute;
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
-  }
-  
-  .mouse {
-      width: 30px;
-      height: 60px;
-      border: 3px solid #333;
-      border-radius: 60px;
-      position: relative;
+}
+
+.mouse {
+    width: 30px;
+    height: 60px;
+    border: 3px solid #333;
+    border-radius: 60px;
+    position: relative;
     cursor: pointer;
-  }
-      .mouse::before {
-          content: '';
-          width: 12px;
-          height: 12px;
-          position: absolute;
-          top: 10px;
-          left: 50%;
-          transform: translateX(-50%);
-          background-color: #333;
-          border-radius: 50%;
-          opacity: 1;
-          animation: wheel 1.5s infinite;
-          -webkit-animation: wheel 2s infinite;
-      }
-  
-  @keyframes wheel {
-      to {
-          opacity: 0;
-          top: 45px;
-      }
-  }
-  
-  @-webkit-keyframes wheel {
-      to {
-          opacity: 0;
-          top: 60px;
-      }
-  }
+}
+
+.mouse::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 1;
+    animation: wheel 1.5s infinite;
+    -webkit-animation: wheel 2s infinite;
+}
+
+@keyframes wheel {
+    to {
+        opacity: 0;
+        top: 45px;
+    }
+}
+
+@-webkit-keyframes wheel {
+    to {
+        opacity: 0;
+        top: 60px;
+    }
+}

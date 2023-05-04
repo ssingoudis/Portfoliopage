@@ -1,6 +1,8 @@
 //import styles
 import { useState, useEffect } from 'react';
 import './navbar.css'
+import Stavros_Singoudis_Logo from '../../img/Stavros_Singoudis_Logo.JPG'
+// import Stavros_Singoudis_Logo from '../../../public/img/Stavros_Singoudis_Logo.JPG'
 
 const Navbar = () => {
 
@@ -23,16 +25,28 @@ const Navbar = () => {
     //clean up Eventlistener
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-
+ 
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+      transition: '.3s'
+    });
+  }
 
   return (
     <div className='navbar'>
       <div className="container">
         <div className="left-side">
           <div>
-            <img src="" alt="" />
+            <img 
+              src={Stavros_Singoudis_Logo}
+              alt="" 
+              onClick={scrollToTop}/>
           </div>
-          <span className='name'>Stavros Singoudis</span>
+          <span 
+            className='name' 
+            onClick={scrollToTop}>Stavros Singoudis</span>
         </div>
         <div className="right-side">
           <nav className={isActive ? 'active' : ''}>

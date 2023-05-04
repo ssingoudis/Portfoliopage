@@ -1,0 +1,130 @@
+.about {
+  background-color: #FAFAFA;
+  padding-top: 3rem;
+}
+
+.about .heading-text {
+  padding-top: .4rem;
+  padding-bottom: 3rem;
+}
+
+.about h2 {
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+
+.about .divider {
+  width: 95%;
+  margin: auto;
+  display: flex;
+}
+
+.about .left-side {
+  width: 35%;
+  display: block;
+}
+
+.about .right-side {
+  width: 65%;
+}
+
+.about .container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: auto;
+  padding-bottom: 6rem;
+}
+
+.about .skill {
+  padding: .5rem;
+  width: 40%;
+  background-color: #E7E7E7;
+  border-radius: 4px;
+  color: #666;
+  margin: .3rem auto;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.about .skill:nth-child(odd) {
+  margin-right: 0;
+}
+
+.about .skill:nth-child(even) {
+  margin-left: .5rem;
+}
+
+  @media screen and (max-width: 768px) {
+    .about .divider {
+      display: block;
+    }
+
+    .about .left-side {
+      width: unset;
+    }
+
+    .about .right-side {
+      width: unset;
+    }
+  }
+
+  @media screen and (max-width: 530px) {
+    .about .skill:nth-child(odd) {
+      margin-left: unset;
+    }
+    .about .skill:nth-child(even) {
+      margin-left: unset;
+    }
+    .about .skill {
+      width: 100%;
+    }
+  }
+
+.about .skill:hover {
+  cursor: pointer;
+  background-color: #1a202c60;
+  color: white;
+}
+
+.about .skill-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.about span {
+  padding-left: .5rem;
+}
+
+.about .code-icon {
+  font-size: 2.8rem;
+  padding-top: 2rem;
+}
+
+.about .rotating-logo {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #000;
+    animation: none;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about .code-icon {
+    padding-top: 3rem;
+  }
+}
+
+.about .faSquareCheck {
+  font-size: 1.75rem;
+  color: rgba(0, 128, 0, .6);
+}

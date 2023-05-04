@@ -33,7 +33,7 @@ const Footer = () => {
         <hr />
 
           <div className='lower-wrapper'>
-            <p>© Copyright 2023. Made by <a href="...">Stavros Singoudis</a></p>
+            <p>© Copyright 2023. Made by <a href="#home">Stavros Singoudis</a></p>
             </div>
       </div>
     </div>

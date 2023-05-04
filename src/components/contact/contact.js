@@ -33,17 +33,26 @@ export const Contact = () => {
 
     emailjs.sendForm(`${USER_ID}`, `${TEMPLATE_ID}`, form.current, `${PUBLIC_KEY}`)
       .then((result) => {
-        setIsSuccess(true)
+        setIsSuccess(true);
+        setTimeout(() => {
+          setIsSuccess(null);
+        }, 15000);
+        
         form.current.reset()
       }
         , (error) => {
-          setIsSuccess(false)
+          setIsSuccess(false);
+          setTimeout(() => {
+            setIsSuccess(null);
+          }, 15000);
         });
   }
 
   return (
-    <div className='contact'>
+    <div id='contact' className='contact'>
+
       <BasicAlerts isSuccess={isSuccess} />
+      
       <div className='container'>
         <h1>Contact</h1>
         <hr className='heading' />
@@ -99,10 +108,6 @@ export const Contact = () => {
           </form>
         </div>
       </div>
-{/* 
-      {isSuccess && <BasicAlerts severity="success">Your form was submitted successfully!</BasicAlerts>}
-      {!isSuccess && <BasicAlerts severity="error">There was an error submitting your form.</BasicAlerts>} */}
-
     </div>
   )
 }

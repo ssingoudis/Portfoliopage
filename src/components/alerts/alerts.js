@@ -34,9 +34,9 @@ const BasicAlerts = ({ isSuccess }) => {
           <Alert
             severity="error"
             className='alert-title'
-            onClose={() => { }}>
-            <AlertTitle>ERROR - Message couldn't be sent!</AlertTitle
-            ></Alert>}
+            onClose={() => handleClose}>
+            <AlertTitle>ERROR - Message couldn't be sent!</AlertTitle>
+          </Alert>}
     </Stack>
   );
 }
