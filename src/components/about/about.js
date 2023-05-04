@@ -13,10 +13,12 @@ const About = () => {
 
   return (
     <div id='about' className='about'>
+      <div className='rotating-logo-container'>
       <img
         src={Stavros_Singoudis_Logo}
         alt=""
         className='rotating-logo' />
+        </div>
       <h1>Skills & Technologies</h1>
       <hr className='heading' />
       <div className='divider'>

@@ -44,6 +44,11 @@
   .footer .left-wrapper {
     min-width: 35%;
   }
+
+  .footer .description {
+    max-width: 480px;
+    margin: auto;
+  }
   
   .footer .right-wrapper {
     min-width: 20%;
@@ -68,6 +73,12 @@
     margin: 0;
     padding: 0;
     cursor: pointer;
+  }
+
+  .footer img:hover {
+    transition: transform;
+    transform: translateY(-.15rem);
+    transition-duration: .3s;
   }
   
   .footer .lower-wrapper {

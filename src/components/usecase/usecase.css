@@ -1,0 +1,12 @@
+.usecase .upper-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.usecase .upper-left-wrapper {
+  width: 50%;
+}
+
+.usecase .upper-right-wrapper {
+  width: 50%;
+}

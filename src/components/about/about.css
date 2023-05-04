@@ -1,6 +1,7 @@
 .about {
   background-color: #FAFAFA;
   padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .about .heading-text {
@@ -54,31 +55,33 @@
   margin-left: .5rem;
 }
 
-  @media screen and (max-width: 768px) {
-    .about .divider {
-      display: block;
-    }
-
-    .about .left-side {
-      width: unset;
-    }
-
-    .about .right-side {
-      width: unset;
-    }
+@media screen and (max-width: 768px) {
+  .about .divider {
+    display: block;
   }
 
-  @media screen and (max-width: 530px) {
-    .about .skill:nth-child(odd) {
-      margin-left: unset;
-    }
-    .about .skill:nth-child(even) {
-      margin-left: unset;
-    }
-    .about .skill {
-      width: 100%;
-    }
+  .about .left-side {
+    width: unset;
   }
+
+  .about .right-side {
+    width: unset;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .about .skill:nth-child(odd) {
+    margin-left: unset;
+  }
+
+  .about .skill:nth-child(even) {
+    margin-left: unset;
+  }
+
+  .about .skill {
+    width: 100%;
+  }
+}
 
 .about .skill:hover {
   cursor: pointer;
@@ -100,21 +103,51 @@
   padding-top: 2rem;
 }
 
+.about .rotating-logo-container {
+  animation: pulse 2s ease-in-out infinite;
+  width: 128px;
+  height: 128px;
+  margin: auto;
+}
+
+.about .rotating-logo-container:hover {
+  animation: paused;
+}
+
 .about .rotating-logo {
-    width: 128px;
-    height: 128px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px #000;
-    animation: none;
-    animation: rotate 20s linear infinite;
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #000;
+  transition: transform .3s ease;
+  animation: rotate 20s linear infinite;
+}
+
+.about .rotating-logo:hover {
+  animation-play-state: paused;
 }
 
 @keyframes rotate {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 

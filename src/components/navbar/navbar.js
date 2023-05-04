@@ -12,6 +12,10 @@ const Navbar = () => {
     setIsActive(!isActive)
   }
 
+  const handleClose = () => {
+    setIsActive(false)
+  }
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -66,10 +70,10 @@ const Navbar = () => {
             </div>
 
             <div className={isActive ? 'menu-items active' : 'menu-items'}>
-              <a href="#home">Home</a>
-              <a href="#about">About</a>
-              <a href="#projects">Projects</a>
-              <a href="#contact">Contact</a>
+              <a href="#home" onClick={handleClose}>Home</a>
+              <a href="#about" onClick={handleClose}>About</a>
+              <a href="#projects" onClick={handleClose}>Projects</a>
+              <a href="#contact" onClick={handleClose}>Contact</a>
             </div>
 
           </nav>

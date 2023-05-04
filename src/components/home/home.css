@@ -1,8 +1,16 @@
 .home .container {
-    display: block;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
     background-image: url('../../img/home-background.png');
     height: calc(100vh - 78px);
     padding: 1rem;
+}
+
+.home .wrapper {
+    display: block;
+    margin-top: 10vh;
+    max-width: 480px;
 }
 
 .home h1 {
@@ -14,14 +22,14 @@
     margin-top: 16px;
 }
 
-.mouse-container {
+.home .mouse-container {
     position: absolute;
     bottom: 5%;
     left: 50%;
     transform: translateX(-50%);
 }
 
-.mouse {
+.home .mouse {
     width: 30px;
     height: 60px;
     border: 3px solid #333;

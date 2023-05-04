@@ -20,18 +20,19 @@ const Home = () => {
   return (
     <div id='home' className='home'>
       <div className='container'>
+        <div className='wrapper'>
+          <h1>Hey, I'm Stavros</h1>
 
-        <h1>Hey, I'm Stavros</h1>
+          <p>A Software Enthusiast, UI Designer & passionate Front-End focused Web Developer.
+            My Design creates great User Experiences and leads to the overall success of the Product.</p>
 
-        <p>A Frontend focused Web Developer building <br />
-          the Frontend of Websites and Web Applications that <br />
-          leads to the success of the overall product</p>
-
-        <button onClick={handleClickProjects}>Projects</button>
+          <button onClick={handleClickProjects}>Projects</button>
           <div className='mouse-container' onClick={handleClickAbout}>
             <div className='mouse'></div>
           </div>
+        </div>
       </div>
+
 
     </div>
   )

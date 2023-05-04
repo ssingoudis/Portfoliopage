@@ -78,6 +78,8 @@
 
 .projects .heading-description {
   padding-top: 32px;
+  max-width: 480px;
+  margin: auto;
 }
 
 .projects h2 {
@@ -102,11 +104,3 @@
     transform: rotateY(360deg);
   }
 }
-
-
-/* 
-@media screen and (max-width: 768px) {
-  .projects .code-icon {
-    padding-top: 3rem;
-  }
-} */

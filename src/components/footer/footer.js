@@ -8,7 +8,7 @@ const Footer = () => {
         <div className='upper-wrapper'>
           <div className='left-wrapper'>
             <h4>Stavros Singoudis</h4>
-            <p>A Frontend focused Web Developer building the Frontend of Websites and Web Applications that leads to the success of the overall product</p>
+            <p className='description'>A Software Enthusiast, UI Designer & passionate Front-End focused Web Developer.</p>
           </div>
           <hr className='mobile-hr'/>
             <div className='right-wrapper'>
