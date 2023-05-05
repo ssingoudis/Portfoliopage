@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   color: black;
+  box-sizing: border-box;
   /* background: url('../src/img/home-background.png'); */
 }
 
