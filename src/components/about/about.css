@@ -6,7 +6,7 @@
 
 .about .heading-text {
   padding-top: .4rem;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
 }
 
 .about h2 {
@@ -18,28 +18,33 @@
   width: 95%;
   margin: auto;
   display: flex;
+  /* max-width: 480px;
+  align-items: center; */
 }
 
 .about .left-side {
-  width: 35%;
+  max-width: 480px;
   display: block;
+  width: 50%;
+  margin: auto;
 }
 
 .about .right-side {
-  width: 65%;
+  width: 50%;
 }
 
 .about .container {
   display: flex;
-  justify-content: space-evenly;
+  min-width: 480px;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   margin: auto;
-  padding-bottom: 6rem;
 }
 
 .about .skill {
   padding: .5rem;
-  width: 40%;
+  width: 200px;
   background-color: #E7E7E7;
   border-radius: 4px;
   color: #666;
@@ -55,17 +60,27 @@
   margin-left: .5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .about .divider {
     display: block;
   }
 
   .about .left-side {
     width: unset;
+    max-width: 720px;
   }
 
   .about .right-side {
     width: unset;
+  }
+    .about .skill:nth-child(odd) {
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+
+  .about .skill:nth-child(even) {
+    margin-right: 2px;
+    margin-left: 2px;
   }
 }
 
@@ -108,10 +123,6 @@
   width: 128px;
   height: 128px;
   margin: auto;
-}
-
-.about .rotating-logo-container:hover {
-  animation: paused;
 }
 
 .about .rotating-logo {
@@ -160,4 +171,9 @@
 .about .faSquareCheck {
   font-size: 1.75rem;
   color: rgba(0, 128, 0, .6);
+}
+
+.about .navigationBT {
+  color: #FACF0F;
+  font-weight:bold;
 }

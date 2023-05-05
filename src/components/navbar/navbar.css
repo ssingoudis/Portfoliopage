@@ -15,15 +15,6 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.navbar a {
-  color: black;
-}
-
-.navbar a:hover {
-  transition-duration: .3s;
-  color: #FACF0F;
-}
-
 .navbar .left-side {
   display: flex;
   align-items: center;
@@ -108,11 +99,11 @@
   transition-duration: .3s;
 }
 
-.navbar .menu-items.active a {
+.navbar .menu-items.active .navigationBT {
   padding: 1rem;
 }
 
-.navbar .menu-items.active a:hover {
+.navbar .menu-items.active .navigationBT:hover {
   transform: translateY(-.15rem);
 }
 

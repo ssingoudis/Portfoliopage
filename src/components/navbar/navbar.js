@@ -2,9 +2,11 @@
 import { useState, useEffect } from 'react';
 import './navbar.css'
 import Stavros_Singoudis_Logo from '../../img/Stavros_Singoudis_Logo.JPG'
+
+import { Link } from 'react-router-dom';
 // import Stavros_Singoudis_Logo from '../../../public/img/Stavros_Singoudis_Logo.JPG'
 
-const Navbar = () => {
+const Navbar = ({ removeHashFromUrl }) => {
 
   const [isActive, setIsActive] = useState(false)
 
@@ -15,6 +17,30 @@ const Navbar = () => {
   const handleClose = () => {
     setIsActive(false)
   }
+
+  const handleClickHome = () => {
+    const section = document.getElementById('home');
+    section.scrollIntoView();
+    removeHashFromUrl();
+  };
+
+  const handleClickAbout = () => {
+    const section = document.getElementById('about');
+    section.scrollIntoView();
+    removeHashFromUrl();
+  };
+
+  const handleClickProjects = () => {
+    const section = document.getElementById('projects');
+    section.scrollIntoView();
+    removeHashFromUrl();
+  };
+
+  const handleClickContact = () => {
+    const section = document.getElementById('contact');
+    section.scrollIntoView();
+    removeHashFromUrl();
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,7 +55,7 @@ const Navbar = () => {
     //clean up Eventlistener
     return () => window.removeEventListener('resize', handleResize);
   }, []);
- 
+
   function scrollToTop() {
     window.scrollTo({
       top: 0,
@@ -38,27 +64,45 @@ const Navbar = () => {
     });
   }
 
+  console.log(removeHashFromUrl())
+
   return (
     <div className='navbar'>
       <div className="container">
         <div className="left-side">
           <div>
-            <img 
+            <img
               src={Stavros_Singoudis_Logo}
-              alt="" 
-              onClick={scrollToTop}/>
+              alt=""
+              onClick={scrollToTop} />
           </div>
-          <span 
-            className='name' 
+          <span
+            className='name'
             onClick={scrollToTop}>Stavros Singoudis</span>
         </div>
         <div className="right-side">
           <nav className={isActive ? 'active' : ''}>
             <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#projects">Projects</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <li><button
+                className='navigationBT'
+                onClick={() => { handleClickHome(); removeHashFromUrl(); }}>
+                Home
+              </button></li>
+              <li><button
+                className='navigationBT'
+                onClick={() => { handleClickAbout(); removeHashFromUrl(); }}>
+                About
+              </button></li>
+              <li><button
+                className='navigationBT'
+                onClick={() => { handleClickProjects(); removeHashFromUrl(); }}>
+                Projects
+              </button></li>
+              <li><button
+                className='navigationBT'
+                onClick={() => { handleClickContact(); removeHashFromUrl(); }}>
+                Contact
+              </button></li>
             </ul>
 
             <div
@@ -70,12 +114,27 @@ const Navbar = () => {
             </div>
 
             <div className={isActive ? 'menu-items active' : 'menu-items'}>
-              <a href="#home" onClick={handleClose}>Home</a>
-              <a href="#about" onClick={handleClose}>About</a>
-              <a href="#projects" onClick={handleClose}>Projects</a>
-              <a href="#contact" onClick={handleClose}>Contact</a>
+              <button
+                className='navigationBT'
+                onClick={() => { handleClickHome(); handleClose(); removeHashFromUrl(); }}>
+                Home
+              </button>
+              <button
+                className='navigationBT'
+                onClick={() => { handleClickAbout(); handleClose(); removeHashFromUrl(); }}>
+                About
+              </button>
+              <button
+                className='navigationBT'
+                onClick={() => { handleClickProjects(); handleClose(); removeHashFromUrl(); }}>
+                Projects
+              </button>
+              <button
+                className='navigationBT'
+                onClick={() => { handleClickContact(); handleClose(); removeHashFromUrl(); }}>
+                Contact
+              </button>
             </div>
-
           </nav>
         </div>
       </div>

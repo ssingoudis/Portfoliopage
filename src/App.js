@@ -6,29 +6,28 @@ import './App.css';
 //import components
 import Mainpage from './pages/mainpage';
 import Navbar from './components/navbar/navbar';
-import Home from './components/home/home';
 import Footer from './components/footer/footer';
-import Contact from './components/contact/contact';
-import Projects from './components/projects/projects';
-import About from './components/about/about';
 import Usecase from './components/usecase/usecase';
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 
 function App() {
 
+  const removeHashFromUrl = () => {
+    window.history.replaceState({}, document.title, window.location.pathname);
+  }
+
   return (
     <div className="App">
 
-<BrowserRouter>
-      <Navbar />
+
+      <Navbar removeHashFromUrl={removeHashFromUrl}/>
         <Routes>
-          <Route path="/" element={<Mainpage />} />
-          <Route path="/usecase" element={<Usecase />} />
+          <Route path="/" element={<Mainpage removeHashFromUrl={removeHashFromUrl}/>} />
         </Routes>      
-      <Footer />
-</BrowserRouter>
+      <Footer removeHashFromUrl={removeHashFromUrl}/>
+
       {/* <BrowserRouter>
         <Navbar />
         <Routes>

@@ -1,7 +1,14 @@
 //import styles
 import './footer.css'
 
-const Footer = () => {
+const Footer = ({ removeHashFromUrl }) => {
+
+  const handleClickHome = () => {
+    const section = document.getElementById('home');
+    section.scrollIntoView();
+    removeHashFromUrl();
+  };
+
   return (
     <div className='footer'>
       <div className='container'>
@@ -33,7 +40,7 @@ const Footer = () => {
         <hr />
 
           <div className='lower-wrapper'>
-            <p>© Copyright 2023. Made by <a href="#home">Stavros Singoudis</a></p>
+            <p>© Copyright 2023. Made by <button className='navigationBT' onClick={handleClickHome}><b>Stavros Singoudis</b></button></p>
             </div>
       </div>
     </div>

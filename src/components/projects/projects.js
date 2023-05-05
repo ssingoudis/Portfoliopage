@@ -14,7 +14,7 @@ const Projects = () => {
           <FontAwesomeIcon icon={faCode} className='code-icon'/>
           <h1> Apps I've Built</h1>
           <hr className='heading'/>
-          <p className='heading-description'>Here you can see some of my personal and client projects that I have created, with each project containing its own case study. ADD ONE MORE LINE LOREM IPSUM DOLORIS !!! ASDASDAS</p>
+          <p className='heading-description'>Building projects is the most practical way to learn anything. Here you can see some of my personal and client projects that I have created, with each project containing its own case study.</p>
         </div>
         <div className='bottom-wrapper'>
           {projects.map((project) => (

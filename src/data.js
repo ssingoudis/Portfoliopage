@@ -46,7 +46,7 @@ export const projects = [
       link: "https://tranquilecolodge.com/"
     },
         {
-      id: 5,
+      id: 6,
       title: "PixaBay API",
       subtitle: "Wordpress, WooCommerce",
       description:

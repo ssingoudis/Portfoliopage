@@ -3,6 +3,10 @@
     color: #fff;
     width: 100%;
   }
+
+  .footer p {
+    color: #fff;
+  }
   
   .footer h4 {
     font-size: 22px;

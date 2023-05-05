@@ -8,6 +8,11 @@ h1 {
   margin-bottom: .8rem;
 }
 
+p {
+  color: #666666;
+  font-size: 18px;
+}
+
 button {
   background-color: #FACF0F;
   border-radius: 6px;
@@ -21,6 +26,17 @@ button {
   transition-property: transform;
   transition-timing-function: ease-in-out;
   transition-duration: .3s;
+}
+
+.navigationBT {
+  all: unset;
+}
+
+.navigationBT:hover {
+  all: unset;
+  cursor: pointer;
+  transition-duration: .3s;
+  color: #FACF0F;
 }
 
 button:hover {
