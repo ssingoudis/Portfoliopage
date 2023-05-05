@@ -7,6 +7,10 @@ import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { projects } from '../../data'
 
 const Projects = () => {
+
+  
+
+
   return (
     <div id='projects' className='projects'>
       <div className='container'>
