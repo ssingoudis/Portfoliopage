@@ -1,6 +1,12 @@
 //import styles
 import './footer.css'
 
+//import socials
+import Twitter from '../../img/socials/Twitter-logo-transparent.png'
+import LinkedIn from '../../img/socials/Linkedin-logo-round-transparent.png'
+import Discord from '../../img/socials/Discord-logo-transparent.png'
+
+
 const Footer = ({ removeHashFromUrl }) => {
 
   const handleClickHome = () => {
@@ -23,15 +29,15 @@ const Footer = ({ removeHashFromUrl }) => {
               <ul>
                 <li>
                   <img 
-                    src="img/Twitter-logo-transparent.png" 
+                    src={Twitter} 
                     alt='Twitter-Logo'/></li>
                 <li>
                   <img 
-                    src="img/Linkedin-logo-round-transparent.png" 
+                    src={LinkedIn}
                     alt='LinkedIn-Logo'/></li>
                 <li>
                   <img 
-                    src="img/Discord-logo-transparent.png" 
+                    src={Discord} 
                     alt='Discord-Logo'/></li>
               </ul>
             </div>

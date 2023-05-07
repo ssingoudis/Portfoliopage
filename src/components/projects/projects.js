@@ -10,6 +10,13 @@ import { projects } from '../../data'
 
 //import components
 import BasicModal from '../modal/modal'
+import PixaBayAPI from '../modal/pixabay-modal'
+import WeatherApp from '../modal/weatherApp-modal'
+import MagicMemory from '../modal/magicMemory-modal'
+import Portfolio from '../modal/portfolio-modal'
+import Hotel from '../modal/hotel-modal'
+import Restaurant from '../modal/restaurant-modal'
+
 
 const Projects = () => {
 
@@ -24,6 +31,7 @@ const Projects = () => {
         </div>
         <div className='bottom-wrapper'>
           {projects.map((project) => (
+            // eslint-disable-next-line
             <a key={project.id}>
               <div className='project-wrapper'>
                 <img
@@ -41,7 +49,14 @@ const Projects = () => {
                   <p className='project-description'>
                     {project.description}
                   </p>
-                  <BasicModal />
+                  {project.id === 1 && <PixaBayAPI />}
+                  {project.id === 2 && <WeatherApp />}
+                  {project.id === 3 && <MagicMemory />}
+                  {project.id === 4 && <Portfolio />}
+                  {project.id === 5 && <Hotel />}
+                  {project.id === 6 && <Restaurant />}
+
+
                 </div>
               </div>
             </a>

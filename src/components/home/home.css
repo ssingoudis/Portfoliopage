@@ -1,7 +1,6 @@
 .home .container {
     display: flex;
     justify-content: center;
-    /* align-items: center; */
     background-image: url('../../img/home-background.png');
     height: calc(100vh - 78px);
     padding: 1rem;

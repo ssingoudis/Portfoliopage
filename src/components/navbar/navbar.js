@@ -1,9 +1,8 @@
 //import styles
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './navbar.css'
 import Stavros_Singoudis_Logo from '../../img/Stavros_Singoudis_Logo.JPG'
 
-import { Link } from 'react-router-dom';
 // import Stavros_Singoudis_Logo from '../../../public/img/Stavros_Singoudis_Logo.JPG'
 
 const Navbar = ({ removeHashFromUrl }) => {
@@ -18,6 +17,7 @@ const Navbar = ({ removeHashFromUrl }) => {
     setIsActive(false)
   }
 
+  //navigation links
   const handleClickHome = () => {
     const section = document.getElementById('home');
     section.scrollIntoView();
@@ -42,20 +42,6 @@ const Navbar = ({ removeHashFromUrl }) => {
     removeHashFromUrl();
   };
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 768) {
-        setIsActive(false);
-      }
-    };
-
-    //add Eventlistener
-    window.addEventListener('resize', handleResize);
-
-    //clean up Eventlistener
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   function scrollToTop() {
     window.scrollTo({
       top: 0,
@@ -64,8 +50,6 @@ const Navbar = ({ removeHashFromUrl }) => {
     });
   }
 
-  console.log(removeHashFromUrl())
-
   return (
     <div className='navbar'>
       <div className="container">
@@ -73,7 +57,7 @@ const Navbar = ({ removeHashFromUrl }) => {
           <div>
             <img
               src={Stavros_Singoudis_Logo}
-              alt=""
+              alt="Logo"
               onClick={scrollToTop} />
           </div>
           <span

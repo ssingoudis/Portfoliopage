@@ -7,13 +7,17 @@ import BasicAlerts from '../alerts/alerts';
 //import hooks
 import { useRef, useState } from 'react'
 
+//import Mail Programm
 import emailjs from '@emailjs/browser';
+
+//import hdden data
 import { USER_ID, TEMPLATE_ID, PUBLIC_KEY } from '../../config'
 
 
 
 export const Contact = () => {
 
+  //set message information for E-Mail data
   let date = new Date()
   let day = date.getDay()
   let month = date.getMonth() + 1
@@ -22,12 +26,11 @@ export const Contact = () => {
   let minutes = date.getMinutes()
   let absendeZeit = `Nachricht gesendet am ${day}.${month}.${year} um ${hours}:${minutes} Uhr.`
 
-  console.log(absendeZeit)
-
   const [isSuccess, setIsSuccess] = useState(null)
 
   const form = useRef();
 
+  // prevent Page reload
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -37,7 +40,7 @@ export const Contact = () => {
         setTimeout(() => {
           setIsSuccess(null);
         }, 15000);
-        
+
         form.current.reset()
       }
         , (error) => {
@@ -52,7 +55,7 @@ export const Contact = () => {
     <div id='contact' className='contact'>
 
       <BasicAlerts isSuccess={isSuccess} />
-      
+
       <div className='container'>
         <h1>Contact</h1>
         <hr className='heading' />

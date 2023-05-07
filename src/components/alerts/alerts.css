@@ -4,6 +4,7 @@
   bottom: 1%;
   right: 1%;
   align-items: center;
+  z-index: 50;
 }
 
   @media screen and (max-width: 768px) {

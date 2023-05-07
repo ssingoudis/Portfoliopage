@@ -37,7 +37,6 @@
   .form-row {
     width: 100%;
     margin: auto;
-    /* border: 2px solid green; */
   }
   
   .contact label {
@@ -46,7 +45,6 @@
     font-weight: 700;
     padding-bottom: .3rem;
     letter-spacing: 1px;
-    /* border: 2px solid red; */
   }
   
   .contact input{
@@ -59,7 +57,6 @@
     margin-bottom: 2rem;
     background: rgba(153,153,153,.2);
     outline: none;
-    /* border: 2px solid orange; */
   }
   
   .contact .textarea {
@@ -75,7 +72,6 @@
     margin-bottom: 2rem;
     background: rgba(153,153,153,.2);
     outline: none;
-    /* border: 2px solid red; */
   }
   
   .contact button {

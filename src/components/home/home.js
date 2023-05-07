@@ -1,9 +1,6 @@
 //import styles
 import './home.css'
 
-// import Stavros_Singoudis_Logo from '../../img/Stavros_Singoudis_Logo.JPG'
-
-
 const Home = ({ removeHashFromUrl  }) => {
 
   const handleClickAbout = () => {
@@ -18,16 +15,13 @@ const Home = ({ removeHashFromUrl  }) => {
     removeHashFromUrl();
   };
 
-
   return (
     <div id='home' className='home'>
       <div className='container'>
         <div className='wrapper'>
           <h1>Hey, I'm Stavros</h1>
-
           <p>A Software Enthusiast, UI Designer & passionate <br/>Front-End focused Web Developer.
             My Design creates<br/>great User Experiences and leads to the<br/>overall success of the Product.</p>
-
           <button onClick={handleClickProjects}>Projects</button>
           <div className='mouse-container' onClick={handleClickAbout}>
             <div className='mouse'></div>

@@ -14,16 +14,7 @@ import javascript from '../../img/technologies/javascript.png'
 import css from '../../img/technologies/css3.png'
 import html from '../../img/technologies/html5.png'
 import react from '../../img/technologies/react.png'
-import tailwind from '../../img/technologies/tailwind.png'
-import wordpress from '../../img/technologies/wordpress.png'
-import woocommerce from '../../img/technologies/woocommerce.png'
-import elementor from '../../img/technologies/elementor.png'
-
-//import data
-// import { projects } from '../../data';
-
-//import hooks
-// import { useState } from 'react';
+import API from '../../img/technologies/RESTfulAPI.png'
 
 
 // styles
@@ -78,13 +69,12 @@ const body = {
 
 
 
-export default function BasicModal() {
+export default function WeatherApp() {
 
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  // const [projectContent, setProjectContent] = useState(null);
-
+  
 
   const buttons = {
     display: 'flex',
@@ -133,7 +123,7 @@ const button = {
             sx={heading}
             variant="h3"
             component="h2">
-            Project.Name
+            Weather Application
           </Typography>
 
           <hr className='heading' />
@@ -160,21 +150,18 @@ const button = {
             <div>
               <h1>Technology used</h1>
               <div>
-                <img className='techimg' style={img} src={javascript} />
-                <img className='techimg' style={img} src={css} />
                 <img className='techimg' style={img} src={html} />
-                <img style={img} src={react} />
-                <img style={img} src={tailwind} />
-                <img style={img} src={elementor} />
-                <img style={img} src={wordpress} />
-                <img style={img} src={woocommerce} />
+                <img className='techimg' style={img} src={css} />
+                <img className='techimg' style={img} src={javascript} />
+                <img className='techimg' style={img} src={react} />
+                <img className='techimg' style={img} src={API} />
               </div>
             </div>
           </Typography>
 
           <Typography className='modalBTcontainer' style={check ? buttons : buttonsResponsive}>
-            <button style={button} className='modalBT'>Project Link</button>
-            <button style={button} className='modalBT'>Back to Homepage</button>
+            <button style={button} className='modalBT' onClick={() => {window.open('https://weather.singoudis.dev/', '_blank')}}>Project Link</button>
+            <button style={button} className='modalBT' onClick={handleClose}>Back to Homepage</button>
           </Typography>
         </Box>
       </Modal>

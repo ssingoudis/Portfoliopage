@@ -19,24 +19,26 @@ const BasicAlerts = ({ isSuccess }) => {
   return (
     <Stack spacing={2}>
 
+    {/* success message afer contact form submit */}
       {isSuccess === true &&
         open &&
-          <Alert
-            severity="success"
-            className='alert'
-            onClose={handleClose}>
-            <AlertTitle
-              className='alert-title'>Your message has been sent successfully!</AlertTitle>
-          </Alert>}
+        <Alert
+          severity="success"
+          className='alert'
+          onClose={handleClose}>
+          <AlertTitle
+            className='alert-title'>Your message has been sent successfully!</AlertTitle>
+        </Alert>}
 
+    {/* failure message afer contact form submit failed */}
       {isSuccess === false &&
         open &&
-          <Alert
-            severity="error"
-            className='alert-title'
-            onClose={() => handleClose}>
-            <AlertTitle>ERROR - Message couldn't be sent!</AlertTitle>
-          </Alert>}
+        <Alert
+          severity="error"
+          className='alert-title'
+          onClose={() => handleClose}>
+          <AlertTitle>ERROR - Message couldn't be sent!</AlertTitle>
+        </Alert>}
     </Stack>
   );
 }
