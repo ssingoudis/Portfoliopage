@@ -1,31 +1,30 @@
 //import styles
 import './projects.css'
+
+//import icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 
 //import data
 import { projects } from '../../data'
 
+//import components
+import BasicModal from '../modal/modal'
+
 const Projects = () => {
-
-  
-
 
   return (
     <div id='projects' className='projects'>
       <div className='container'>
         <div className='top-wrapper'>
-          <FontAwesomeIcon icon={faCode} className='code-icon'/>
+          <FontAwesomeIcon icon={faCode} className='code-icon' />
           <h1> Apps I've Built</h1>
-          <hr className='heading'/>
+          <hr className='heading' />
           <p className='heading-description'>Building projects is the most practical way to learn anything. Here you can see some of my personal and client projects that I have created, with each project containing its own case study.</p>
         </div>
         <div className='bottom-wrapper'>
           {projects.map((project) => (
-            <a
-              href={project.link}
-              target='_blank'
-              key={project.id}>
+            <a key={project.id}>
               <div className='project-wrapper'>
                 <img
                   alt="gallery"
@@ -42,6 +41,7 @@ const Projects = () => {
                   <p className='project-description'>
                     {project.description}
                   </p>
+                  <BasicModal />
                 </div>
               </div>
             </a>

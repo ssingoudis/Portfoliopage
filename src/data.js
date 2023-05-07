@@ -82,6 +82,10 @@ export const projects = [
       link: 'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design'
     },
     {
+      title: 'Material UI',
+      link: 'https://mui.com/'
+    },
+    {
       title: 'SQL',
       link: 'https://en.wikipedia.org/wiki/SQL'
     },

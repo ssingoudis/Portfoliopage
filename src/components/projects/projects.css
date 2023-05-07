@@ -44,7 +44,6 @@
 
 .project-description-wrapper:hover {
   opacity: 1;
-  cursor: pointer;
 }
 
 .projects a {
@@ -74,6 +73,7 @@
 
 .project-description {
   color: #cbd5e0;
+  padding-bottom: .5rem;
 } 
 
 .projects .heading-description {
