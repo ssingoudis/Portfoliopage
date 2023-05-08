@@ -19,16 +19,8 @@ export const projects = [
     link: "https://weather.singoudis.dev/"
   },
   {
+
     id: 3,
-    title: "Memory App",
-    subtitle: "ReactJS, React Hooks",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
-    image: "https://i.ibb.co/pvpPw9M/Magic-Memory-Mockup.jpg",
-    link: "https://memory.singoudis.dev/"
-  },
-  {
-    id: 4,
     title: "Portfolio Website",
     subtitle: "ReactJS, TailwindCSS",
     description:
@@ -36,6 +28,16 @@ export const projects = [
     image: "https://i.ibb.co/VNtp3c3/Tailwind-Portfolio-Mockup.jpg",
     link: "tailwindcss-portfolio.singoudis.dev"
   },
+  {
+    id: 4,
+    title: "Memory App",
+    subtitle: "ReactJS, React Hooks",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+    image: "https://i.ibb.co/pvpPw9M/Magic-Memory-Mockup.jpg",
+    link: "https://memory.singoudis.dev/"
+  },
+
   {
     id: 5,
     title: "Hotel Website",

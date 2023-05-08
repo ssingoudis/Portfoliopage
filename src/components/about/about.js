@@ -46,8 +46,8 @@ const About = ({ removeHashFromUrl }) => {
             <br /><br />
             At the turn of the year 2022, I decided to take a one-year trip through South America to see something of the world, unwind my soul and refresh my <b>programming skills</b> again.
             <br /> <br />
-            Since then, I've made some websites but mostly worked on my own
-            <button className='navigationBT' onClick={handleClickProjects}>projects</button>
+            Since then, I've made some websites but mostly worked on my 
+            own <button className='navigationBT' onClick={handleClickProjects}> projects</button>
             , since, as we all know, building projects is the most convenient way to learn.
             <br /> <br />
             I am specialized in <b>HTML</b>, <b>CSS</b> & <b>JavaScript</b> and use as frameworks mainly <b>ReactJS</b>, sometimes TailwindCSS. As operating system I prefer <b>Windows</b>, while I feel most comfortable with <b>Git</b> in terms of version control systems.

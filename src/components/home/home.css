@@ -17,6 +17,10 @@
     padding-top: 2rem;
 }
 
+.extra-space {
+  margin-top: 10rem !important;
+}
+
 .home button {
     margin-top: 16px;
 }

@@ -39,22 +39,23 @@ const heading = {
   color: 'black',
   display: 'flex',
   fontWeight: 700,
-  justifyContent: 'center'
+  justifyContent: 'center',
+  textAlign: 'center'
 }
 
 const image = {
   display: 'flex',
   margin: 'auto',
   width: window.innerWidth * .7,
+  maxWidth: '1280px',
   height: 'auto',
   borderRadius: '6px'
 }
 
 const p = {
   display: 'flex',
-  textAlign: 'center',
   maxWidth: '85%',
-  margin: '2rem auto'
+  margin: '2rem auto 3rem auto'
 }
 
 const img = {
@@ -63,7 +64,7 @@ const img = {
 
 const body = {
   color: 'black',
-  textAlign: 'center'
+  textAlign: 'center',
 }
 
 
@@ -83,19 +84,19 @@ export default function MagicMemory() {
     justifyContent: 'space-evenly',
   }
 
-   const buttonsResponsive = {
+  const buttonsResponsive = {
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
     alignItems: 'stretch',
     margin: '2rem auto 1rem auto',
-  } 
+  }
 
   // check width to apply responsive design
-const widthOfWindow = window.innerWidth
-const check = widthOfWindow > 600 ? true : false;
+  const widthOfWindow = window.innerWidth
+  const check = widthOfWindow > 600 ? true : false;
 
-const button = {
+  const button = {
     padding: '1rem 2rem',
     marginTop: '1.5rem',
   }
@@ -127,23 +128,25 @@ const button = {
 
           <hr className='heading' />
           <p style={p}>
-            This page contains the case study of Dopefolio Open-Source Project which includes the Project Overview,
-            Tools Used and Live Links to the official product.
+            This page contains the case study of my Magic Memory Application which includes the Project Overview,
+            Tools Used and a Live Link to the official product.
           </p>
           <img
-            src="https://i.ibb.co/b5kdr4N/Weather-App-Mockup.jpg"
+            src="https://i.ibb.co/pvpPw9M/Magic-Memory-Mockup.jpg"
             alt="Project Image"
             style={image} />
 
           <Typography id="modal-modal-description" sx={body}>
-            <div>
-              <h1>Project description</h1>
-              <p style={p}>here comes the description, ive used
-                API from piyabay, created...
-                optimised it for mobile....
-              </p>
-            </div>
+            <h1>Project description</h1>
           </Typography>
+          <p style={p}>My first project in the ReactJS environment was this one.
+            The goal of this project was to get familiar with the ReactJS framework.
+            <br/><br/>
+            I've focused on using the most common React-Hooks like the useState- & useEffect-Hook. Furthermore I learned 
+            how to pass props between the various components. This was the perfect introduction to ReactJS for 
+            me because I've learned to think in React. 
+            <br/><br/>This App is optimized for mobile devices.
+            </p>
 
           <Typography sx={body} variant='technology'>
             <div>
@@ -159,7 +162,7 @@ const button = {
           </Typography>
 
           <Typography className='modalBTcontainer' style={check ? buttons : buttonsResponsive}>
-            <button style={button} className='modalBT' onClick={() => {window.open('https://memory.singoudis.dev/', '_blank')}}>Project Link</button>
+            <button style={button} className='modalBT' onClick={() => { window.open('https://memory.singoudis.dev/', '_blank') }}>Project Link</button>
             <button style={button} className='modalBT' onClick={handleClose}>Back to Homepage</button>
           </Typography>
         </Box>

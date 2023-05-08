@@ -2,7 +2,7 @@
 import './footer.css'
 
 //import socials
-import Twitter from '../../img/socials/Twitter-logo-transparent.png'
+import GitHub from '../../img/socials/GitHub-logo.png'
 import LinkedIn from '../../img/socials/Linkedin-logo-round-transparent.png'
 import Discord from '../../img/socials/Discord-logo-transparent.png'
 
@@ -29,16 +29,19 @@ const Footer = ({ removeHashFromUrl }) => {
               <ul>
                 <li>
                   <img 
-                    src={Twitter} 
-                    alt='Twitter-Logo'/></li>
+                    src={GitHub} 
+                    alt='GitHub-Logo'
+                    onClick={() => {window.open('https://github.com/ssingoudis', '_blank')}}/></li>
                 <li>
                   <img 
                     src={LinkedIn}
-                    alt='LinkedIn-Logo'/></li>
+                    alt='LinkedIn-Logo'
+                    onClick={() => {window.open('https://www.linkedin.com/in/stavros-singoudis-170b24195/', '_blank')}}/></li>
                 <li>
-                  <img 
+                  <img
                     src={Discord} 
-                    alt='Discord-Logo'/></li>
+                    alt='Discord-Logo'
+                    onClick={() => {window.open('https://discord.gg/RnRCb63Q7F', '_blank')}}/></li>
               </ul>
             </div>
         </div>

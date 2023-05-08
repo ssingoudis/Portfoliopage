@@ -49,7 +49,8 @@ const heading = {
   color: 'black',
   display: 'flex',
   fontWeight: 700,
-  justifyContent: 'center'
+  justifyContent: 'center',
+  textAlign: 'center'
 }
 
 const image = {

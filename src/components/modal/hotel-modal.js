@@ -39,22 +39,23 @@ const heading = {
   color: 'black',
   display: 'flex',
   fontWeight: 700,
-  justifyContent: 'center'
+  justifyContent: 'center',
+  textAlign: 'center'
 }
 
 const image = {
   display: 'flex',
   margin: 'auto',
   width: window.innerWidth * .7,
+  maxWidth: '1280px',
   height: 'auto',
   borderRadius: '6px'
 }
 
 const p = {
   display: 'flex',
-  textAlign: 'center',
   maxWidth: '85%',
-  margin: '2rem auto'
+  margin: '2rem auto 3rem auto'
 }
 
 const img = {
@@ -63,9 +64,8 @@ const img = {
 
 const body = {
   color: 'black',
-  textAlign: 'center'
+  textAlign: 'center',
 }
-
 
 
 export default function Hotel() {
@@ -83,19 +83,19 @@ export default function Hotel() {
     justifyContent: 'space-evenly',
   }
 
-   const buttonsResponsive = {
+  const buttonsResponsive = {
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
     alignItems: 'stretch',
     margin: '2rem auto 1rem auto',
-  } 
+  }
 
   // check width to apply responsive design
-const widthOfWindow = window.innerWidth
-const check = widthOfWindow > 600 ? true : false;
+  const widthOfWindow = window.innerWidth
+  const check = widthOfWindow > 600 ? true : false;
 
-const button = {
+  const button = {
     padding: '1rem 2rem',
     marginTop: '1.5rem',
   }
@@ -127,23 +127,31 @@ const button = {
 
           <hr className='heading' />
           <p style={p}>
-            This page contains the case study of Dopefolio Open-Source Project which includes the Project Overview,
-            Tools Used and Live Links to the official product.
+            This page contains the case study of the Tranquil Eco Lodge Project which includes the Project Overview,
+            Tools Used and a Live Link to the official product.
           </p>
           <img
-            src="https://i.ibb.co/b5kdr4N/Weather-App-Mockup.jpg"
+            src="https://i.ibb.co/n0CQ9fH/Tranquil-Eco-Lodge-Mockup-Better.jpg"
             alt="Project Image"
             style={image} />
 
           <Typography id="modal-modal-description" sx={body}>
-            <div>
-              <h1>Project description</h1>
-              <p style={p}>here comes the description, ive used
-                API from piyabay, created...
-                optimised it for mobile....
-              </p>
-            </div>
+            <h1>Project description</h1>
           </Typography>
+          <p style={p}>I worked on this project, in exchange for four weeks of living on a private island in Bocas del Torro, Panama. 
+            <br /><br />The requirements were for me to build a WordPress website layout,
+            connect the Stripe API and a booking system to it, and provide it with
+            highly detailed documentation so the customer could edit and add new material on her own.
+            <br/><br/>I just started designing the layout immediately because the criteria were so 
+            clearly stated, and after doing some research, I decided to use WooCommerce as the booking system. 
+            I connected the Stripe API into the WooCommerce booking system, provided clear documentation, 
+            spent time training the client. I used GoDaddy to host the website.
+            The Website is completely responsive.
+            <br/><br/>
+            Unfortunately, the client didn't finish adding her content yet and damaged it during 
+            the process. Even Nevertheless, I feel the need to present it because the majority of the 
+            excellent work can still be seen.
+          </p>
 
           <Typography sx={body} variant='technology'>
             <div>
@@ -158,7 +166,7 @@ const button = {
           </Typography>
 
           <Typography className='modalBTcontainer' style={check ? buttons : buttonsResponsive}>
-            <button style={button} className='modalBT' onClick={() => {window.open('https://tranquilecolodge.com/', '_blank')}}>Project Link</button>
+            <button style={button} className='modalBT' onClick={() => { window.open('https://tranquilecolodge.com/', '_blank') }}>Project Link</button>
             <button style={button} className='modalBT' onClick={handleClose}>Back to Homepage</button>
           </Typography>
         </Box>

@@ -38,22 +38,23 @@ const heading = {
   color: 'black',
   display: 'flex',
   fontWeight: 700,
-  justifyContent: 'center'
+  justifyContent: 'center',
+  textAlign: 'center'
 }
 
 const image = {
   display: 'flex',
   margin: 'auto',
   width: window.innerWidth * .7,
+  maxWidth: '1280px',
   height: 'auto',
   borderRadius: '6px'
 }
 
 const p = {
   display: 'flex',
-  textAlign: 'center',
   maxWidth: '85%',
-  margin: '2rem auto'
+  margin: '2rem auto 3rem auto'
 }
 
 const img = {
@@ -62,9 +63,8 @@ const img = {
 
 const body = {
   color: 'black',
-  textAlign: 'center'
+  textAlign: 'center',
 }
-
 
 
 export default function Restaurant() {
@@ -126,23 +126,27 @@ const button = {
 
           <hr className='heading' />
           <p style={p}>
-            This page contains the case study of Dopefolio Open-Source Project which includes the Project Overview,
-            Tools Used and Live Links to the official product.
+            This page contains the case study of the Taverna Mythos Project which includes the Project Overview,
+            Tools Used and a Live Link to the official product.
           </p>
           <img
-            src="https://i.ibb.co/b5kdr4N/Weather-App-Mockup.jpg"
+            src="https://i.ibb.co/hHFK2hF/Taverna-Mythos-Mockup.jpg"
             alt="Project Image"
             style={image} />
 
           <Typography id="modal-modal-description" sx={body}>
-            <div>
               <h1>Project description</h1>
-              <p style={p}>here comes the description, ive used
-                API from piyabay, created...
-                optimised it for mobile....
-              </p>
-            </div>
           </Typography>
+
+              <p style={p}>
+                This is the first project I've created for a client. <br/><br/>
+                The requirements were pretty straightforward; I needed to develop a one page application 
+                that includes information on the menu, opening times, a visual representation of some 
+                dishes, the restaurant's address, and driving instructions. <br/><br/>
+                Since I was a novice at web building, I utilized WordPress as my main tool and Elementor to create the layout.
+                I finished and submitted the project in a week. The Website is completely responsive.
+              </p>
+
 
           <Typography sx={body} variant='technology'>
             <div>

@@ -27,7 +27,11 @@ const Projects = () => {
           <FontAwesomeIcon icon={faCode} className='code-icon' />
           <h1> Apps I've Built</h1>
           <hr className='heading' />
-          <p className='heading-description'>Building projects is the most practical way to learn anything. Here you can see some of my personal and client projects that I have created, with each project containing its own case study.</p>
+          <div className='heading-description-wrapper'>
+          <p className='heading-description'>Building projects is the most practical way to learn anything. Here 
+          you can see some of my personal and client projects that I have created, with each project containing 
+          its own case study.</p>
+          </div>
         </div>
         <div className='bottom-wrapper'>
           {projects.map((project) => (
@@ -51,12 +55,10 @@ const Projects = () => {
                   </p>
                   {project.id === 1 && <PixaBayAPI />}
                   {project.id === 2 && <WeatherApp />}
-                  {project.id === 3 && <MagicMemory />}
-                  {project.id === 4 && <Portfolio />}
+                  {project.id === 3 && <Portfolio />}
+                  {project.id === 4 && <MagicMemory />}
                   {project.id === 5 && <Hotel />}
                   {project.id === 6 && <Restaurant />}
-
-
                 </div>
               </div>
             </a>

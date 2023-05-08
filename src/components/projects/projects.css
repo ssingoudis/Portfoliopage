@@ -76,10 +76,15 @@
   padding-bottom: .5rem;
 } 
 
+.projects .heading-description-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .projects .heading-description {
   padding-top: 32px;
   max-width: 480px;
-  margin: auto;
+  margin: auto 1rem;
 }
 
 .projects h2 {
