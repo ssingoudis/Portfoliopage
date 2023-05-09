@@ -6,9 +6,6 @@ import Mainpage from './pages/mainpage';
 import Navbar from './components/navbar/navbar';
 import Footer from './components/footer/footer';
 
-import { Routes, Route } from 'react-router-dom';
-
-
 function App() {
 
   //remove the '#' from the url on anchor tags
