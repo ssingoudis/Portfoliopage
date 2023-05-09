@@ -147,7 +147,7 @@ export default function Portfolio() {
           Additionally, I integrated Google Maps and a contact form that I made with Netlify Forms.
           I could quickly understand how TailwindCSS functions and how to apply it.
           <br/><br/>It turned out that this wouldn't be my last portfolio, thus it's the reason 
-          it only exists in the desktop version and was never made mobile-friendly.
+          it only got optimized for the desktop version and was never made mobile-friendly.
           </p>
 
           <Typography sx={body} variant='technology'>

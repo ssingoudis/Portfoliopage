@@ -127,7 +127,7 @@ export default function PixaBayAPI() {
 
           <hr className='heading' />
           <p style={p}>
-            This page contains the case study of my Pixabay API App which includes the Project Overview,
+            This page contains the case study of my Pixabay Application which includes the Project Overview,
             Tools Used and a Live Link to the official product.
           </p>
           <img
@@ -140,9 +140,9 @@ export default function PixaBayAPI() {
           </Typography>
               <p style={p}>
 
-                To improve my knowledge of RESTful APIs, I made this project.
+                To strengthen my knowledge of RESTful APIs, I made this project.
                 With the help of Pixabay's free API, I made a straightforward search that shows 
-                all results found in the Pixabay database. <br/> <br/>
+                all results for images found in the Pixabay database. <br/> <br/>
 
                 The program presents the image's tags, views, likes, comments, and downloads along with the 
                 uploader's name, profile picture, and other information on a neatly packaged card.

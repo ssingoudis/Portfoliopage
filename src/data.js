@@ -2,19 +2,18 @@
 export const projects = [
   {
     id: 1,
-    title: "PixaBay API",
+    title: "Pixabay App",
     subtitle: "ReactJS, CSS3, RESTful-API",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+    description:"This project is a lightweight version of Pixabay, linked to its database and fully responsive.",
     image: "https://i.ibb.co/nfNpg7w/Pixabay-Mockup.jpg",
     link: "https://pixabay.singoudis.dev/"
   },
   {
     id: 2,
-    title: "Weather Application",
+    title: "Weather App",
     subtitle: "ReactJS, CSS3, RESTful-API",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "A fully responsive weather application using the Open Weather and GeoDB Cities API",
     image: "https://i.ibb.co/b5kdr4N/Weather-App-Mockup.jpg",
     link: "https://weather.singoudis.dev/"
   },
@@ -24,7 +23,7 @@ export const projects = [
     title: "Portfolio Website",
     subtitle: "ReactJS, TailwindCSS",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "A personal project utilizing TailwindCSS to style my first version of a portfolio page",
     image: "https://i.ibb.co/VNtp3c3/Tailwind-Portfolio-Mockup.jpg",
     link: "tailwindcss-portfolio.singoudis.dev"
   },
@@ -33,7 +32,7 @@ export const projects = [
     title: "Memory App",
     subtitle: "ReactJS, React Hooks",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "A personal project where I developed a mobile version of the world-famous game Memory.",
     image: "https://i.ibb.co/pvpPw9M/Magic-Memory-Mockup.jpg",
     link: "https://memory.singoudis.dev/"
   },
@@ -43,7 +42,7 @@ export const projects = [
     title: "Hotel Website",
     subtitle: "Wordpress, WooCommerce, Responsive Design",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "A work-for-accommodation arrangement in which I created the website for a retreat center in Panama.",
     image: "https://i.ibb.co/n0CQ9fH/Tranquil-Eco-Lodge-Mockup-Better.jpg",
     link: "https://tranquilecolodge.com/"
   },
@@ -52,7 +51,7 @@ export const projects = [
     title: "Restaurant Website",
     subtitle: "Wordpress, Elementor, Responsive Design",
     description:
-      "Taverna Mythos!! Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium dolore rerum laborum iure enim sint nemo omnis voluptate exercitationem eius?",
+      "A commercial project in which I developed the website for a Greek restaurant located in Germany.",
     image: "https://i.ibb.co/hHFK2hF/Taverna-Mythos-Mockup.jpg",
     link: "https://taverna-mythos-emmendingen.com"
   },

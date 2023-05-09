@@ -20,10 +20,10 @@ const Home = ({ removeHashFromUrl  }) => {
       <div className='container'>
         <div className='wrapper'>
           <h1>Hey, I'm Stavros</h1>
-          <p>A Software Enthusiast, UI Designer & passionate 
-            Front-End focused Web Developer. My Design creates
-            great User Experiences and leads to the
-            overall success of the Product.</p>
+          <p>A Software Enthusiast, <b>UI Designer</b> & passionate 
+            Front-End focused <b>Web Developer</b>. My Design creates
+            great User Experiences that lead to the <b>overall success</b> of 
+            the Product.</p>
           <button onClick={handleClickProjects}>Projects</button>
           <div className='mouse-container' onClick={handleClickAbout}>
             <div className='mouse'></div>
