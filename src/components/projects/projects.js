@@ -9,7 +9,6 @@ import { faCode } from '@fortawesome/free-solid-svg-icons'
 import { projects } from '../../data'
 
 //import components
-import BasicModal from '../modal/modal'
 import PixaBayAPI from '../modal/pixabay-modal'
 import WeatherApp from '../modal/weatherApp-modal'
 import MagicMemory from '../modal/magicMemory-modal'

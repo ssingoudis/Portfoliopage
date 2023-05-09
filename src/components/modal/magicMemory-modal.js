@@ -86,7 +86,6 @@ export default function MagicMemory() {
 
   const buttonsResponsive = {
     display: 'flex',
-    alignItems: 'center',
     flexDirection: 'column',
     alignItems: 'stretch',
     margin: '2rem auto 1rem auto',
@@ -133,7 +132,7 @@ export default function MagicMemory() {
           </p>
           <img
             src="https://i.ibb.co/pvpPw9M/Magic-Memory-Mockup.jpg"
-            alt="Project Image"
+            alt="Project-img"
             style={image} />
 
           <Typography id="modal-modal-description" sx={body}>
@@ -152,10 +151,10 @@ export default function MagicMemory() {
             <div>
               <h1>Technology used</h1>
               <div>
-                <img className='techimg' style={img} src={html} />
-                <img className='techimg' style={img} src={css} />
-                <img className='techimg' style={img} src={javascript} />
-                <img className='techimg' style={img} src={react} />
+                <img className='techimg' style={img} src={html} alt='html-logo'/>
+                <img className='techimg' style={img} src={css} alt='css-logo'/>
+                <img className='techimg' style={img} src={javascript} alt='javascript-logo'/>
+                <img className='techimg' style={img} src={react} alt='react-logo'/>
 
               </div>
             </div>

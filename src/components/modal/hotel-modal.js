@@ -85,7 +85,6 @@ export default function Hotel() {
 
   const buttonsResponsive = {
     display: 'flex',
-    alignItems: 'center',
     flexDirection: 'column',
     alignItems: 'stretch',
     margin: '2rem auto 1rem auto',
@@ -132,7 +131,7 @@ export default function Hotel() {
           </p>
           <img
             src="https://i.ibb.co/n0CQ9fH/Tranquil-Eco-Lodge-Mockup-Better.jpg"
-            alt="Project Image"
+            alt="Project-img"
             style={image} />
 
           <Typography id="modal-modal-description" sx={body}>
@@ -157,10 +156,10 @@ export default function Hotel() {
             <div>
               <h1>Technology used</h1>
               <div>
-                <img className='techimg' style={img} src={wordpress} />
-                <img className='techimg' style={img} src={elementor} />
-                <img className='techimg' style={img} src={woocommerce} />
-                <img className='techimg' style={img} src={API} />
+                <img className='techimg' style={img} src={wordpress} alt='wordpress-logo'/>
+                <img className='techimg' style={img} src={elementor} alt='elementor-logo'/>
+                <img className='techimg' style={img} src={woocommerce} alt='woocommerce-logo'/>
+                <img className='techimg' style={img} src={API} alt='API-logo'/>
               </div>
             </div>
           </Typography>

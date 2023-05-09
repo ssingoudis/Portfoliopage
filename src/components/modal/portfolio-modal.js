@@ -85,7 +85,6 @@ export default function Portfolio() {
 
   const buttonsResponsive = {
     display: 'flex',
-    alignItems: 'center',
     flexDirection: 'column',
     alignItems: 'stretch',
     margin: '2rem auto 1rem auto',
@@ -132,7 +131,7 @@ export default function Portfolio() {
           </p>
           <img
             src="https://i.ibb.co/VNtp3c3/Tailwind-Portfolio-Mockup.jpg"
-            alt="Project Image"
+            alt="Project-img"
             style={image} />
 
           <Typography id="modal-modal-description" sx={body}>
@@ -154,10 +153,10 @@ export default function Portfolio() {
             <div>
               <h1>Technology used</h1>
               <div>
-                <img className='techimg' style={img} src={html} />
-                <img className='techimg' style={img} src={tailwind} />
-                <img className='techimg' style={img} src={javascript} />
-                <img className='techimg' style={img} src={react} />
+                <img className='techimg' style={img} src={html} alt='html-logo'/>
+                <img className='techimg' style={img} src={tailwind} alt='tailwind-logo'/>
+                <img className='techimg' style={img} src={javascript} alt='javascript-logo'/>
+                <img className='techimg' style={img} src={react} alt='react-logo'/>
               </div>
             </div>
           </Typography>

@@ -84,7 +84,6 @@ export default function Restaurant() {
 
    const buttonsResponsive = {
     display: 'flex',
-    alignItems: 'center',
     flexDirection: 'column',
     alignItems: 'stretch',
     margin: '2rem auto 1rem auto',
@@ -131,7 +130,7 @@ const button = {
           </p>
           <img
             src="https://i.ibb.co/hHFK2hF/Taverna-Mythos-Mockup.jpg"
-            alt="Project Image"
+            alt="Project-img"
             style={image} />
 
           <Typography id="modal-modal-description" sx={body}>
@@ -152,9 +151,9 @@ const button = {
             <div>
               <h1>Technology used</h1>
               <div>
-                <img className='techimg' style={img} src={wordpress} />
-                <img className='techimg' style={img} src={elementor} />
-                <img className='techimg' style={img} src={css} />
+                <img className='techimg' style={img} src={wordpress} alt='wordpress-logo'/>
+                <img className='techimg' style={img} src={elementor} alt='elementor-logo'/>
+                <img className='techimg' style={img} src={css} alt='css-logo'/>
               </div>
             </div>
           </Typography>

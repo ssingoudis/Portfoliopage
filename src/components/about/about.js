@@ -31,7 +31,7 @@ const About = ({ removeHashFromUrl }) => {
         <hr className='heading' />
         <img
           src={profilePicture}
-          alt="Profile-Picture"
+          alt="profile-img"
           className='profile-picture' />
       </div>
       <div className='divider'>

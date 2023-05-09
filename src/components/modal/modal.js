@@ -10,20 +10,14 @@ import './modal.css'
 
 //import images
 import background from '../../img/home-background.png'
-import javascript from '../../img/technologies/javascript.png'
-import css from '../../img/technologies/css3.png'
-import html from '../../img/technologies/html5.png'
-import react from '../../img/technologies/react.png'
-import tailwind from '../../img/technologies/tailwind.png'
-import wordpress from '../../img/technologies/wordpress.png'
-import woocommerce from '../../img/technologies/woocommerce.png'
-import elementor from '../../img/technologies/elementor.png'
-
-//import data
-// import { projects } from '../../data';
-
-//import hooks
-// import { useState } from 'react';
+// import javascript from '../../img/technologies/javascript.png'
+// import css from '../../img/technologies/css3.png'
+// import html from '../../img/technologies/html5.png'
+// import react from '../../img/technologies/react.png'
+// import tailwind from '../../img/technologies/tailwind.png'
+// import wordpress from '../../img/technologies/wordpress.png'
+// import woocommerce from '../../img/technologies/woocommerce.png'
+// import elementor from '../../img/technologies/elementor.png'
 
 
 // styles
@@ -68,9 +62,9 @@ const p = {
   margin: '2rem auto'
 }
 
-const img = {
-  margin: '1rem'
-}
+// const img = {
+//   margin: '1rem'
+// }
 
 const body = {
   color: 'black',
@@ -84,7 +78,6 @@ export default function BasicModal() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  // const [projectContent, setProjectContent] = useState(null);
 
 
   const buttons = {
@@ -97,7 +90,6 @@ export default function BasicModal() {
 
    const buttonsResponsive = {
     display: 'flex',
-    alignItems: 'center',
     flexDirection: 'column',
     alignItems: 'stretch',
     margin: '2rem auto 1rem auto',
@@ -144,7 +136,7 @@ const button = {
           </p>
           <img
             src="https://i.ibb.co/b5kdr4N/Weather-App-Mockup.jpg"
-            alt="Project Image"
+            alt="Project-img"
             style={image} />
 
           <Typography id="modal-modal-description" sx={body}>
@@ -161,14 +153,14 @@ const button = {
             <div>
               <h1>Technology used</h1>
               <div>
-                <img className='techimg' style={img} src={javascript} />
-                <img className='techimg' style={img} src={css} />
-                <img className='techimg' style={img} src={html} />
+                {/* <img className='techimg' style={img} src={javascript} alt='javascript-logo'/>
+                <img className='techimg' style={img} src={css} alt='css-logo'/>
+                <img className='techimg' style={img} src={html} alt='html-logo'/>
                 <img style={img} src={react} />
                 <img style={img} src={tailwind} />
                 <img style={img} src={elementor} />
                 <img style={img} src={wordpress} />
-                <img style={img} src={woocommerce} />
+                <img style={img} src={woocommerce} /> */}
               </div>
             </div>
           </Typography>

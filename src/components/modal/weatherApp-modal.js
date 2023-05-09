@@ -86,7 +86,6 @@ export default function WeatherApp() {
 
   const buttonsResponsive = {
     display: 'flex',
-    alignItems: 'center',
     flexDirection: 'column',
     alignItems: 'stretch',
     margin: '2rem auto 1rem auto',
@@ -133,7 +132,7 @@ export default function WeatherApp() {
             </p>
           <img
             src="https://i.ibb.co/b5kdr4N/Weather-App-Mockup.jpg"
-            alt="Project Image"
+            alt="Project-img"
             style={image} />
 
           <Typography id="modal-modal-description" sx={body}>
@@ -157,11 +156,11 @@ export default function WeatherApp() {
             <div>
               <h1>Technology used</h1>
               <div>
-                <img className='techimg' style={img} src={html} />
-                <img className='techimg' style={img} src={css} />
-                <img className='techimg' style={img} src={javascript} />
-                <img className='techimg' style={img} src={react} />
-                <img className='techimg' style={img} src={API} />
+                <img className='techimg' style={img} src={html} alt='html-logo'/>
+                <img className='techimg' style={img} src={css} alt='css-logo'/>
+                <img className='techimg' style={img} src={javascript} alt='javascript-logo'/>
+                <img className='techimg' style={img} src={react} alt='react-logo'/>
+                <img className='techimg' style={img} src={API} alt='API-logo'/>
               </div>
             </div>
           </Typography>
