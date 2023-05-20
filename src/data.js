@@ -71,7 +71,7 @@ export const skills = [
     link: 'https://tailwindcss.com/'
   },
   {
-    title: 'Vanilla Javascript',
+    title: 'Vanilla JavaScript',
     link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
   },
   {
