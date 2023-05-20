@@ -68,9 +68,10 @@
   margin-left: .5rem;
 }
 
+/* 
 .about .skill:last-child {
   margin: .3rem auto;
-}
+} */
 
 @media screen and (max-width: 1000px) {
   .about .divider {
