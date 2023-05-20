@@ -83,6 +83,10 @@ export const skills = [
     link: 'https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design'
   },
   {
+    title: 'Sass',
+    link: 'https://sass-lang.com/'
+  },
+  {
     title: 'Material UI',
     link: 'https://mui.com/'
   },
